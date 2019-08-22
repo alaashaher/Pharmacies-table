@@ -1,0 +1,14 @@
+<h1>hello</h1>
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>latitude</th>
+    <th>longitude</th>
+  </tr>
+  <tr *ngFor="let PharmaciesValue of pharmaciesTableProvider.PharmaciesData">
+    <td>{{PharmaciesValue.name}}</td>
+    <td>{{PharmaciesValue.geo_point_2d.lat}}</td>
+    <td>{{PharmaciesValue.geo_point_2d.lon}}</td>
+  </tr>
+</table>
