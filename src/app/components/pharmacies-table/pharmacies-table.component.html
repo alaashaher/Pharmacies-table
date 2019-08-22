@@ -1,6 +1,7 @@
-<h1>hello</h1>
 
-<table>
+<input [(ngModel)]="userName" type="text" placeholder="enter the name you want to search">
+<button (click)="FilterTable()"> filter</button>
+<table style="width: 100%;">
   <tr>
     <th>name</th>
     <th>latitude</th>

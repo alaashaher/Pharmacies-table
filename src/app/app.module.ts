@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PharmaciesTableComponent } from './components/pharmacies-table/pharmacies-table.component';
-import { FilterTableComponent } from './components/filter-table/filter-table.component';
 import { AppProvider } from './app-provider';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +13,6 @@ import { HttpModule } from '@angular/http';
   declarations: [
     AppComponent,
     PharmaciesTableComponent,
-    FilterTableComponent
   ],
   imports: [
     BrowserModule,

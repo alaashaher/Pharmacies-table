@@ -3,15 +3,19 @@ import { PharmaciesTableProvider } from './pharmacies-table.provider';
 @Component({
   selector: 'app-pharmacies-table',
   templateUrl: './pharmacies-table.component.html',
-  styleUrls: ['./pharmacies-table.component.sass']
+  styleUrls: ['./pharmacies-table.component.scss']
 })
 export class PharmaciesTableComponent implements OnInit {
   PharmaciesArray: any = [];
-  constructor(private pharmaciesTableProvider: PharmaciesTableProvider) {  }
+  userName: any;
+  constructor(private pharmaciesTableProvider: PharmaciesTableProvider) { }
 
   ngOnInit() {
-    this.PharmaciesArray = this.pharmaciesTableProvider.PharmaciesData;
     this.pharmaciesTableProvider.PharmaciesFunction();
   }
-
+  FilterTable() {
+    let username: any;
+    username = this.userName;
+    this.pharmaciesTableProvider.PharmaciesFunctionInput(this.userName);
+  }
 }
